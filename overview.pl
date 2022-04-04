@@ -1,11 +1,10 @@
 #!/usr/bin/perl
 
-$countDown = 10;
+$pattern = shift(@ARGV);
 
-while ($countDown != 0) {
-  print "$countDown ...\n";
-  sleep 1;
-  --$countDown;  
+while (<>) {
+  if(/$pattern/) {
+    print unless /^$/;
+    #print;
+  }
 }
-
-print "Boom!\n";
