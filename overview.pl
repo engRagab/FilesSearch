@@ -1,6 +1,11 @@
 #!/usr/bin/perl
 
-print "Enter hexadecimal number: ";
-$answer = <STDIN>;
+$countDown = 10;
 
-print hex($answer), "\n";
+while ($countDown != 0) {
+  print "$countDown ...\n";
+  sleep 1;
+  --$countDown;  
+}
+
+print "Boom!\n";
